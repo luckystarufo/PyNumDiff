@@ -34,7 +34,7 @@ framework which facilitates unbiased comparisons across different methods. Notab
 small number of tuning parameters which balance the faithfulness and smoothness of the derivative estimate. 
 
 Methods implemented in this work were originally used for data pre-processing in the sparse identification of nonlinear 
-dynamics (SINDy[@brunton2016discovering, @de2020pysindy]), an algorithmic approach for dynamic model discovery. The goal is to discover the underlying governing 
+dynamics (SINDy)[@brunton2016discovering; @de2020pysindy], an algorithmic approach for dynamic model discovery. The goal is to discover the underlying governing 
 equation from the measurement data and one important step is to use numerical derivatives of measured states to 
 populate the feature library so that one can uncover the structure of the model with sparse regression techniques. 
 Unfortunately, such measurement data are usually polluted by noise which makes the calculation of numerical derivatives 
@@ -52,10 +52,10 @@ In this package, we mainly implement four commonly used families of differentiat
 assumptions, including both global and local methods [@ahnert2007numerical]. The first family of methods usually start by 
 applying a smoothing filter to the data, followed by a finite difference calculation[@butterworth1930theory]. 
 The second family relies on building a local model of the data through linear regression, and then analytically 
-calculate the differentiation based on the model[@belytschko1996meshless, @schafer2011savitzky, @savitzky1964smoothing]. 
-The third family we consider is the Kalman filter[@kalman1960new, @henderson2010fundamentals, @aravkin2017generalized, @crassidis2004optimal], 
+calculate the differentiation based on the model[@belytschko1996meshless; @schafer2011savitzky; @savitzky1964smoothing]. 
+The third family we consider is the Kalman filter[@kalman1960new; @henderson2010fundamentals; @aravkin2017generalized; @crassidis2004optimal], 
 with unknown noise characteristics. And the last family is an optimization approach based on total variation 
-regularization (TVR) method [@rudin1992nonlinear, @chartrand2011numerical]. For more technical details, 
+regularization (TVR) method [@rudin1992nonlinear; @chartrand2011numerical]. For more technical details, 
 refer to [@van2020numerical].
 
 For ease of use and updating flexibility, most APIs are directly provided as Python methods. Applying `PyNumDiff` usually 
